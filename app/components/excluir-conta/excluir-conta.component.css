@@ -1,0 +1,282 @@
+.fundo {
+    background: #222020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+}
+
+/* Configurações da Navbar */
+
+.img_logo_header {
+    width: 50px;
+    /*transform: translateY(28px);*/
+}
+
+.logo_header {
+    z-index: 2;
+}
+
+.header,
+.navigation_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background-color: black;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.538);
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.navigation_header {
+    gap: 3em;
+    z-index: 2;
+}
+
+.navigation_header a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+    font-weight: bold;
+}
+
+.navigation_header a:hover {
+    color: #68388b;
+}
+
+.btn_icon_header {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .btn_icon_header {
+        display: block;
+    }
+    .navigation_header {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: black;
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
+}
+
+#active {
+    color: #68388b;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Configurações das opções laterais */
+
+#select {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 120%;
+    position: absolute;
+    top: 21%;
+    width: 91%;
+    text-align: center;
+  }
+  
+  #select:hover {
+    background-color: #3F3498;
+    color: white;
+    transition: 1s;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.993);
+  }
+  
+  #opcao2 {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 120%;
+    position: absolute;
+    top: 42%;
+    width: 91%;
+    text-align: center;
+    background-color: #3F3498;
+    color: white;
+  }
+  
+  #opcao2:hover {
+    background-color: #3F3498;
+    color: white;
+    transition: 1s;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.993);
+  }
+  
+  #icone-editar {
+    display: none;
+    color: white;
+  }
+  
+  #icone-excluir {
+    display: none;
+    color: white;
+  }
+  
+  /* Configurações do menu lateral */
+  
+  #menulateral {
+      background-color: black;
+      width: 16%;
+      height: 100%;
+      position: fixed;
+  }
+
+  /* Configurações da caixa */
+
+  .box {
+    background-color: black;
+    width: 40%;
+    height: 35vh;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 35%;
+    left: 37%;
+  }
+
+  .aviso {
+    background-color: #FFA600;
+    width: 40%;
+    height: 35vh;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 35%;
+    left: 37%;
+  }
+
+  h1 {
+     color: white;
+     margin-top: 7%;
+  }
+
+  #titulo-aviso {
+    color: black;
+  }
+
+  .btn {
+    padding: 10px 35px;
+    font-size: 15px;
+    margin-top: 8%;
+    cursor: pointer;
+  }
+
+  #btn-sim {
+    margin-right: 10%;
+  }
+
+  #confirmar {
+    margin-right: 8%;
+  }
+
+  #cancelar {
+    padding: 10px 25px;
+  }
+
+  #btn-sim:hover {
+    border: 1px solid green;
+    color: green;
+  }
+
+  #btn-nao:hover {
+    border: 1px solid red;
+    color: red;
+  }
+
+/* Configurações de Responsividade */
+
+@media screen and (max-width: 800px){
+  #menulateral {
+      width: 10%;
+  }
+
+  #icone-editar {
+      display: block;
+      width: 75%;
+      height: 8%;
+      padding: 10px;
+      color: white;
+      font-size: 35px;
+      text-align: center;
+      position: absolute;
+      top: 18%;
+  }
+
+ #icone-editar:hover {
+      background-color: #3F3498;
+      color: white;
+  } 
+
+  #icone-excluir {
+      display: block;
+      background-color: #3F3498;
+      color: white;
+      width: 75%;
+      height: 8%;
+      padding: 10px;
+      font-size: 35px;
+      text-align: center;
+      position: absolute;
+      top: 44%;
+  }
+
+  #icone-excluir:hover {
+      background-color: #3F3498;
+      color: white;
+  }
+
+  div#menulateral > #select{
+      display: none;
+  }
+
+  div#menulateral > #opcao2{
+      display: none;
+  }
+
+  .box {
+    width: 60%;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+  }
+
+  .aviso {
+    width: 60%;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<div id="particles-js"></div>
+<section class="nav">
+  <h1>Beyond the Game</h1>
+  <h3 class="span loader">
+    <span class="m">V</span>
+    <span class="m">Á</span>
+    <span class="m">&nbsp;</span>
+    <span class="m">A</span>
+    <span class="m">L</span>
+    <span class="m">É</span>
+    <span class="m">M</span>
+    <span class="m">&nbsp;</span>
+    <span class="m">D</span>
+    <span class="m">O</span>
+    <span class="m">&nbsp;</span>
+    <span class="m">J</span>
+    <span class="m">O</span>
+    <span class="m">G</span>
+    <span class="m">O</span>
+  </h3>
+  <div class="nav-container">
+    <a class="nav-tab" (click)="scrollToSection('tab-svelte')">Quem Somos</a>
+    <a class="nav-tab" (click)="scrollToSection('tab-esbuild')"
+      >Nosso Propósito</a
+    >
+    <a class="nav-tab" (click)="scrollToSection('tab-next')">História</a>
+    <a class="nav-tab" (click)="scrollToSection('tab-vite')">Fundadores</a>
+    <span class="nav-tab-slider"></span>
+  </div>
+</section>
+<main class="main">
+  <section class="slider" id="tab-svelte">
+    <h1>Quem somos?</h1>
+    <h2>
+      Nós somos a Beyond the game, uma empresa que decidimos criar pela nossa paixão por games e nossa visão de tornar o processo de compartilhar jogos mais fácil e agradável. Decidimos unir nossos esforços para criar uma plataforma que não apenas simplifica a vida dos desenvolvedores, permitindo que eles compartilhem seus jogos de forma eficiente por meio de um sistema web, mas também melhorar a experiência dos nossos clientes, que encontrarão comodidade e diversão em nosso incrível aplicativo.
+    </h2>
+  </section>
+  <section class="slider" id="tab-esbuild">
+    <h1>Nosso Propósito</h1>
+    <h2>
+     Como mencionei anteriormente, nosso principal objetivo é simplificar a vida dos desenvolvedores, concentrando-nos especialmente em atender às suas necessidades. Através da nossa plataforma web, oferecemos aos desenvolvedores a capacidade de adicionar jogos, criar postagens e promover seus próprios jogos, tudo isso sem a necessidade de lidar diretamente com os aspectos técnicos do backend. Queremos proporcionar a eles uma experiência completa e sem complicações, para que possam se concentrar no que fazem de melhor: desenvolver jogos incríveis.
+    </h2>
+  </section>
+  <section class="slider" id="tab-next">
+    <h1>História</h1>
+    <h2>
+      Fundado em 2020, a empresa BTG sempre teve como propósito facilitar a vida
+      dos desenvolvedores e clientes. Como no começo, nós fundadores da empresa, percebemos que desenvolvedores de jogos tem certas dificuldades em postar jogos e nós mesmo sempre tivemos 
+      dificuldade em adquirir novos jogos, nós fomos inspirados a
+      criar uma plataforma aonde facilitaria os desenvolvedores de jogos a
+      postar seus jogos e aos clientes no processo de aquisição.
+    </h2>
+  </section>
+  <section class="slider" id="tab-vite">
+    <h1 (click)="loginADM()" style="cursor: pointer;">Fundadores</h1>
+    <h2>
+      João Gabriel <br />
+      João Victor <br />
+      Gabriel Gomes <br />
+      Debora Rodrigues<br />
+      Kariane Ernandes <br />
+    </h2>
+    <br />
+    <br />
+    <br />
+    <a routerLink="/login">Clique aqui para ser redirecionado à web</a>
+  </section>
+</main>

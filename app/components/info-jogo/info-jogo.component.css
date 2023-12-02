@@ -1,0 +1,90 @@
+/* Configurações da caixa de informações do jogo */
+
+.info {
+    background-color: black;
+    width: 60%;
+    height: auto;
+    padding: 45px;
+    z-index: 100;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.479);
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .fechar {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0.9em;
+    left: 43em;
+  }
+  
+  h1{
+      color: white;
+  }
+  
+  .nome-do-jogo {
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    width: 90%;
+    padding: 7px;
+  }
+  
+  .titulo-class {
+    color: white;
+    padding: 0;
+  }
+  
+  .descricao {
+    color: white;
+    width: 50%;
+    overflow-wrap: break-word;
+  }
+  
+  .idade {
+    color: white;
+    font-size: 23px;
+    border: 1px solid white;
+    width: 28px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .opcoes {
+    display: flex;
+    gap: 18px;
+  }
+  
+  .btn {
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #btn-edit:hover {
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+  
+  #btn-delete:hover {
+    background-color: red;
+    color: white;
+    border: none;
+  }
+  

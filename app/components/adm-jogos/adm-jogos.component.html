@@ -1,0 +1,63 @@
+<div class="fundo"></div>
+<div class="header" id="header">
+    <button class="btn_icon_header" onclick="toggleSidebar()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+    </button>
+    <div class="logo_header">
+        <img src="assets/logo.png" class="img_logo_header" alt="Logo BTG">
+    </div>
+    <div class="navigation_header" id="navigation_header">
+        <button class="btn_icon_header" onclick="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+        </button>
+        <a routerLink="/administracao">Empresas</a>
+        <a routerLink="/adm-usuarios">Usuários</a>
+        <a routerLink="/adm-jogos" id="active">Jogos</a>
+        <a (click)="logout()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+              </svg>
+            </a>
+    </div>
+  </div>
+  <div class="search-container">
+      <label for="search" style="cursor: pointer;">
+          <fa-icon [icon]="faSearch"></fa-icon>
+      </label>
+      <input type="search" placeholder="Pesquise" id="search" [(ngModel)]="searchText">
+  </div>
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Link</th>
+                <th>Descrição</th>
+                <th>Nome</th>
+                <th>Classificação</th>
+                <th>Empresa_id</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let jogo of jogos | search: searchText">
+                <td data-label="Id">{{ jogo.id }}</td>
+                <td data-label="Link">{{ jogo.link }}</td>
+                <td data-label="Descrição">{{ jogo.descricao }}</td>
+                <td data-label="Nome">{{ jogo.nome }}</td>
+                <td data-label="Classificação">{{ jogo.classificacao }}</td>
+                <td data-label="Empresa_id">{{ jogo.empresa_id }}</td>
+                <td data-label="#">
+                    <button class="btn" (click)="deleteJogo(jogo)">
+                        <fa-icon [icon]="faTrash"></fa-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

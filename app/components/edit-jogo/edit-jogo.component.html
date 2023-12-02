@@ -1,0 +1,113 @@
+<div *ngIf="jogo">
+<div class="fundo"></div>
+<div class="voltar">
+    <a id="voltar" routerLink="/home-biblioteca">voltar</a>
+</div>
+    <form
+      (ngSubmit)="salvarEdicao()"
+      [formGroup]="editForm"
+    >
+      <div class="form">
+        <div class="titulo">
+          <div class="user-box">
+            <input type="text" required="" id="campo1" [(ngModel)]="jogo.nome" formControlName="nome" />
+            <label id="campo1" class="texto">Nome do Jogo</label>
+          </div>
+        </div>
+        <div class="user-box">
+          <input type="url" required="" id="campo2" [(ngModel)]="jogo.link" formControlName="link" />
+          <label class="texto">Link do Jogo</label>
+        </div>
+        <div class="user-box">
+          <label id="class">Classificação:</label>
+          <br />
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                name="classificacao"
+                value="10"
+                formControlName="classificacao"
+                [(ngModel)]="jogo.classificacao"
+              />
+              <img src="assets/faixa-etaria2.png" alt="faixa etaria" />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="classificacao"
+                value="12"
+                formControlName="classificacao"
+                [(ngModel)]="jogo.classificacao"
+              />
+              <img
+                src="assets/faixa-etaria3.png"
+                alt="faixa etaria"
+                class="classificacao2"
+                width="300px"
+              /> </label
+            ><br />
+            <label>
+              <input
+                type="radio"
+                name="classificacao"
+                value="14"
+                formControlName="classificacao"
+                [(ngModel)]="jogo.classificacao"
+              />
+              <img
+                src="assets/faixa-etaria4.png"
+                alt="faixa etaria"
+                class="classificacao3"
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="classificacao"
+                value="16"
+                formControlName="classificacao"
+                [(ngModel)]="jogo.classificacao"
+              />
+              <img
+                src="assets/faixa-etaria5.png"
+                alt="faixa etaria"
+                class="classificacao4"
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="classificacao"
+                value="18"
+                formControlName="classificacao"
+                [(ngModel)]="jogo.classificacao"
+              />
+              <img
+                src="assets/faixa-etaria6.png"
+                alt="faixa etaria"
+                class="classificacao5"
+              />
+            </label>
+          </div>
+        </div>
+      <div class="descricao">
+        <div class="user-box">
+          <input type="text" required="" id="campo3" formControlName="descricao" [(ngModel)]="jogo.descricao" />
+          <label class="texto">Descrição</label>
+        </div>
+      </div>
+      <div class="user-box">
+        <p style="color: white; font-size: 20px;">Empresa id</p>
+        <input type="number" id="campo4" required="" formControlName="empresa_id" [(ngModel)]="jogo.empresa_id" readonly>
+      </div>
+      <button type="submit" class="a" id="redirecionamento">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Editar
+      </button>
+    </div>
+    </form>
+</div>

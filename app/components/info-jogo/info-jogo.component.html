@@ -1,0 +1,20 @@
+<div class="info" *ngIf="jogoSelecionado">
+  <button class="fechar" (click)="fecharPopUp()">X</button>
+  <h1 class="nome-do-jogo">{{ jogoSelecionado.nome }}</h1>
+  <p class="descricao">{{ jogoSelecionado.descricao }}</p>
+  <h2 class="titulo-class">Classificação:</h2>
+  <div class="classificação">
+    <p class="idade">{{ jogoSelecionado.classificacao }}</p>
+  </div>
+  <div class="opcoes">
+    <button id="btn-delete" class="btn" (click)="excluirJogo(jogoSelecionado)">
+      Excluir Jogo
+      <fa-icon [icon]="faTrash"></fa-icon>
+    </button>
+    <a routerLink="/editar-jogo/{{ jogoSelecionado.id }}" id="btn-edit" class="btn">
+      Editar Jogo
+      <fa-icon [icon]="faPencil"></fa-icon>
+    </a>
+  </div>
+</div>
+<!-- fechamento div info -->

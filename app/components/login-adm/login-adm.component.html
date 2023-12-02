@@ -1,0 +1,32 @@
+<div class="fundo"></div>
+<div class="login-box">
+    <h2>Login</h2>
+    <form [formGroup]="admForm" (submit)="loginAdm()">
+        <div class="input-box">
+          <input type="text" required="" id="campo1" formControlName="nome" autocomplete="off">
+          <label>Username</label>
+        </div>
+        <div *ngIf="admForm.get('nome')?.errors?.['required'] && admForm.get('nome')?.touched" class="error-input">
+          <p>Campo Obrigatório!</p>
+        </div>
+        <div class="input-box">
+          <input type="password" required="" id="campo2" formControlName="senha" autocomplete="off">
+          <label>Password</label>
+        </div>
+        <div *ngIf="admForm.get('senha')?.errors?.['required'] && admForm.get('senha')?.touched" class="error-input">
+          <p>Campo Obrigatório!</p>
+        </div>
+  
+        <button type="submit" class="bnt-submit" id="bnt-submit" [ngClass]="{'disabled' : !admForm.valid}" [disabled]="!admForm.valid">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          LOGAR
+        </button> 
+    </form>
+</div>
+<div class="voltar">
+  <a id="voltar" routerLink="/">voltar</a>
+</div>
+

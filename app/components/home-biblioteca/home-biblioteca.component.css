@@ -1,0 +1,517 @@
+.fundo1 {
+    background: #222020;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+}
+
+/* Configurações da Navbar */
+
+.img_logo_header {
+  width: 50px;
+  /*transform: translateY(28px);*/
+}
+
+.logo_header {
+  z-index: 2;
+}
+
+.header,
+.navigation_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header {
+  background-color: black;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.538);
+  height: 3.5em;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.navigation_header {
+  gap: 3em;
+  z-index: 2;
+}
+
+.navigation_header a {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+  font-weight: bold;
+}
+
+.navigation_header a:hover {
+  color: #68388b;
+}
+
+.btn_icon_header {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_icon_header {
+      display: block;
+  }
+  .navigation_header {
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      background-color: black;
+      height: 100%;
+      width: 35vw;
+      padding: 1em;
+      animation-duration: 1s;
+      margin-left: -100vw;
+  }
+}
+
+#active {
+  color: #68388b;
+}
+
+@keyframes showSidebar {
+  from {margin-left: -100vw;}
+  top {margin-left: -10vw;}
+}
+
+
+/*Banner*/
+.fundo2 {
+  width: 100%;
+  height: 70vh;
+}
+
+.banner{
+    width: 100%;
+    height: 69.5vh;
+ }
+
+.profile{
+    z-index: 900;
+    background: #0f0f0f;
+    margin-top: -5px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+  }
+  
+  /*logoempresa*/
+  .logoempresa {
+    width: 108px;
+    height: 110px;
+    border-radius: 50%;
+    border: .5em solid #0f0f0f ;
+    background-color: #0c0c0d;
+    z-index: 80;
+    position: absolute;
+    top: 72%;
+    left: 9%;
+  }
+  /*logoempresa*/
+ .nome-empresa{
+   margin-top: -2%;
+   margin-left: 20%;
+   color: white;
+  }
+
+  .id-empresa {
+    position: absolute;
+    left: 22%;
+  }
+/*numero de seguidores*/
+  .seguidores p {
+    color: #ffffff;
+    margin-left: 22%;
+    font-size: 14px;
+  }
+  
+  #select {
+    color: #68388b;
+  }
+
+  .biblioteca {
+    color: white;
+    margin-top: 5%;
+    margin-left: 25%;
+    transform: translateY(31%);
+    width: 200px;
+  }
+
+  .biblioteca > a:hover {
+    transition: 1s; 
+    color: #68388b;
+  }
+
+  .post  {
+    color: white;
+    margin-top: -1%;
+    margin-left: 65%;
+    text-decoration: none;
+  }
+
+  .post a:hover {
+    transition: 1s; 
+    color: #68388b;
+  }
+ 
+ /*linha*/
+  .hr1 {
+    border: 0;
+    border-top: 1px solid #CCC;
+    margin-top: 1%;
+  }
+
+ 
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ /*biblioteca titulo*/
+
+ .abs,
+h2:after,
+.cards .card figcaption,
+.cards .card:after,
+.news .card figcaption,
+.news .card:after,
+.news .article figcaption {
+  position: absolute;
+}
+.rel,
+h2,
+h2 strong,
+.cards .card,
+.news .card,
+.news .article {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df,
+.cards,
+.news {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+.vm,
+h2,
+h2 strong,
+h2 span {
+  vertical-align: middle;
+}
+body {
+  font-family: 'Alegreya Sans';
+}
+.wrapper {
+  padding: 15px;
+}
+h2 {
+  padding: 10px;
+  padding-left: 25px;
+  color: #ccc;
+  margin: 0;
+}
+h2 strong {
+  z-index: 2;
+  padding: 4px 8px;
+}
+h2 span {
+  font-size: 0.7em;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+ /*biblioteca cards*/
+
+  
+ .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.card {
+  cursor: pointer;
+}
+  
+.cards,
+.news {
+  flex-flow: row wrap;
+}
+.cards .card,
+.news .card {
+  margin: 20px;
+  width: 180px;
+  height: 270px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+.cards .card img,
+.news .card img {
+  width: 100%;
+  min-height: 100%;
+}
+.cards .card figcaption,
+.news .card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+.cards .card:after,
+.news .card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,0.5));
+  transition: 0.3s;
+}
+.cards .card:hover,
+.news .card:hover,
+.cards .card:focus,
+.news .card:focus,
+.cards .card:active,
+.news .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0,0,0,0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+.cards .card:hover figcaption,
+.news .card:hover figcaption,
+.cards .card:focus figcaption,
+.news .card:focus figcaption,
+.cards .card:active figcaption,
+.news .card:active figcaption {
+  transform: none;
+}
+.cards .card:hover:after,
+.news .card:hover:after,
+.cards .card:focus:after,
+.news .card:focus:after,
+.cards .card:active:after,
+.news .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+.news .article {
+  overflow: hidden;
+  width: 350px;
+  height: 235px;
+  margin: 20px;
+}
+.news .article img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.news .article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  background: rgba(6,18,53,0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+.news .article figcaption h3 {
+  color: #3792e3;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.news .article:hover img,
+.news .article:focus img,
+.news .article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.news .article:hover figcaption,
+.news .article:focus figcaption,
+.news .article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
+
+/* Configurações da caixa de informações do jogo */
+
+.info {
+  background-color: black;
+  width: 60%;
+  height: auto;
+  padding: 45px;
+  z-index: 100;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.479);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fechar {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0.9em;
+  left: 43em;
+}
+
+h1{
+    color: white;
+}
+
+.nome-do-jogo {
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  width: 90%;
+  padding: 7px;
+}
+
+.titulo-class {
+  color: white;
+  padding: 0;
+}
+
+.descricao {
+  color: white;
+  width: 50%;
+  overflow-wrap: break-word;
+}
+
+.idade {
+  color: white;
+  font-size: 23px;
+  border: 1px solid white;
+  width: 28px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 18px;
+}
+
+.btn {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+#btn-delete {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px 7px;
+}
+
+#btn-edit:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+#btn-delete:hover {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+
+/* Configurações de Responsividade */
+
+@media screen and (max-width: 800px) and (max-height: 600px){
+  .logoempresa {
+      width: 100px;
+      transform: translateX(-15%);
+  }
+
+  .nome-empresa , .seguidores {
+      width: 300px;
+      transform: translate(3%, -50%);
+  }
+
+  .seguidores {
+      transform: translateX(42%);
+  }
+
+  .nome-empresa {
+      margin-bottom: -15px;
+  }
+
+  .biblioteca {
+      transform: translateY(50%);
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .post {
+      transform: translateY(30%);
+  }
+
+  .seguidores {
+      margin-left: -1%;
+  }
+}
